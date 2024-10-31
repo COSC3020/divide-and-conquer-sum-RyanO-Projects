@@ -14,7 +14,7 @@ function divideAndConquerSum(a) {
 // pass to split (array, low = 0, high = length-1)
 function split(arr, low, high) {
     if(low <= high) return arr[low];
-    if((high - low) == 1) return arr[low] + arr[high];
+    if((high - low) == 2) return arr[low] + arr[high];
     var subLen = Math.floor((low+high)/3); //
 
     var leftSum = split(arr, low, subLen);
