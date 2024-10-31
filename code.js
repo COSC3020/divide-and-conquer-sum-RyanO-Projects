@@ -13,7 +13,7 @@ function divideAndConquerSum(a) {
 // each third should return the sum of the "subarrays" which at its lowest should each return only one value which can be summed with the others.
 // pass to split (array, low = 0, high = length-1)
 function split(arr, low, high) {
-    if(low == high) return arr[low];
+    if(low <= high) return arr[low];
     if((high - low) == 1) return arr[low] + arr[high];
     var subLen = Math.floor((low+high)/3); //
 
