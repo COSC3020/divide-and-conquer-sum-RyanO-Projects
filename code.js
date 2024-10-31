@@ -17,9 +17,9 @@ function split(arr, low, high, len) {
     if((high - low) == 1) return arr[low] + arr[high];
     var subLen = Math.floor((low+high+1)/3); //
 
-    var leftSum = split(arr, low, subLen);
-    var midSum = split(arr, subLen, 2*subLen);
-    var rightSum = split(arr, 2*subLen, high);
+    var leftSum = split(arr, low, subLen, subLen);
+    var midSum = split(arr, subLen, 2*subLen, subLen);
+    var rightSum = split(arr, 2*subLen, high, subLen);
     return leftSum + midSum + rightSum;
 }
 // I really don't think this is going to work.
