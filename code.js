@@ -16,7 +16,7 @@ function split(arr, low, high, len) {
     if(len == 1) return arr[low];
     if((high - low) == 1) return arr[low] + arr[high];
     var subLen = Math.floor((low+high+1)/3); //
-    var subRem = (low+high+1) % 3;
+    var subRem = ((low+high+1) % 3)+subLen;
 
     var leftSum = split(arr, low, subLen, subLen);
     var midSum = split(arr, subLen, 2*subLen, subLen);
