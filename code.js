@@ -8,7 +8,7 @@ function divideAndConquerSum(a) {
 
 // 
 function split(arr, low, high) {
-    if((high - low + 1) == 1) return arr[low];              // If there is only one element, return it.
+    if((high - low + 1) <= 1) return arr[low];              // If there is only one element, return it.
     if((high - low + 1) == 2) return arr[low] + arr[high];  // If two elements, sum and return.
     var subLen = Math.floor((high - low + 1) / 3);          // Calculate 1/3 of the array.
     var lowMid = low + subLen;                              // Calculate end point of first third.
