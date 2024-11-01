@@ -19,4 +19,3 @@ function split(arr, low, high) {
     var rightSum = split(arr, highMid+1, high);               // Split last third
     return leftSum + midSum + rightSum;                     // Return sum of each third.
 }
-// I really don't think this is going to work.
