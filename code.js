@@ -12,7 +12,7 @@ function split(arr, low, high) {
     if((high - low + 1) == 2) return arr[low] + arr[high];  // If two elements, sum and return.
     var subLen = Math.floor((high - low + 1) / 3);          // Calculate 1/3 of the array.
     var lowMid = low + subLen;                              // Calculate end point of first third.
-    var highMid = lowMid + subLen + 1;                          // Calculate end point of second third.
+    var highMid = lowMid + subLen;                          // Calculate end point of second third.
 
     var leftSum = split(arr, low, lowMid);                  // Split first third
     var midSum = split(arr, lowMid+1, highMid);               // Split second third
