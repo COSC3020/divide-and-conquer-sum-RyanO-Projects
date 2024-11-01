@@ -14,8 +14,8 @@ function split(arr, low, high) {
     var lowMid = low + subLen;                              // Calculate end point of first third.
     var highMid = lowMid + subLen;                          // Calculate end point of second third.
 
-    var leftSum = split(arr, low, lowMid);                  // Split first third
-    var midSum = split(arr, lowMid+1, highMid);               // Split second third
+    var leftSum = split(arr, low, lowMid-1);                  // Split first third
+    var midSum = split(arr, lowMid, highMid-1);               // Split second third
     var rightSum = split(arr, highMid+1, high);               // Split last third
     return leftSum + midSum + rightSum;                     // Return sum of each third.
 }
