@@ -25,3 +25,5 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
+
+![PXL_20241108_044612331~2](https://github.com/user-attachments/assets/800093e0-2a6a-41ba-8fee-afd9eae8c226)
