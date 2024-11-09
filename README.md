@@ -27,19 +27,25 @@ Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
 
 
-T(n) = 3T(n/3) + O(n)
+T(n) = 3T(n/3) + O(1)
+
 3T(n/3) represents the time complexity of recursing through the three thirds of the array each of roughly size (n/3).
-O(n) represent the time complexity of summing each of the elements of the subarrays.
+
+O(1) represent the constant time complexity of summing each of the subarrays.
+
 
 #### Solving by substitution:
-T(n) = 3T(n/3) + n
-= 3(3T(n/9) + n) + n
-= 9T(n/9) + 2n
-= 27T(n/27) + 3n
-= 3^(i) * T(n/3^(i)) + in
+Let c = O(n) be a constant.
 
-#### Base Case: n/3^(i) = 1 => n = 3^(i) => i = log_3(n)
-$3^{log_3(n)}T(1) + nlog_3(n) = nT(1) + nlog_3(n) = n + nlog_3(n) \in \Theta  nlog_3(n)$
+$T(n) = 3T(n/3) + c$
+$= 3(3T(n/9) + c) + c$
+$= 9T(n/9) + 3c + c$
+
+Ignoring constants we get,
+$T(n) = 3^iT(n/3^i)$
+
+#### Base Case: $(n/3^i) = 1  =>  n = 3^i => i = log_3(n)$
+$3^{log_3(n)}T(1) = nT(1) \in \Theta  (n)$
 
 ### Plagiarism Note:
 I used the slides on mergesort as a reference to get started for the code, and I used [this stack overflow](https://stackoverflow.com/questions/30201391/how-to-write-a-recurrence-relation-for-a-given-piece-of-code) and [this geeksforgeeks](https://www.geeksforgeeks.org/recurrence-relations-a-complete-guide/) article to work out the recurrence relation. Other than that I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
