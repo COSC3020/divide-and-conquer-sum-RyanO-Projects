@@ -31,11 +31,11 @@ T(n) = 3T(n/3) + O(1)
 
 3T(n/3) represents the time complexity of recursing through the three thirds of the array each of roughly size (n/3).
 
-O(1) represent the constant time complexity of summing each of the subarrays.
+O(1) represent the constant time complexity of summing each of the subarrays (leftSum + midSum + rightSum).
 
 
 #### Solving by substitution:
-Let c = O(n) be a constant.
+Let c = O(1) be a constant.
 
 $T(n) = 3T(n/3) + c$
 $= 3(3T(n/9) + c) + c$
