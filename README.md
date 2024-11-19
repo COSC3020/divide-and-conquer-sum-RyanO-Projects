@@ -35,7 +35,7 @@ O(1) represent the constant time complexity of summing each of the subarrays (le
 
 
 #### Solving by substitution:
-Let c = O(1) be a constant.
+Let c represent the constant time of O(1) for each iteration of the function.
 
 $T(n) = 3T(n/3) + c$
 $= 3(3T(n/9) + c) + c$
